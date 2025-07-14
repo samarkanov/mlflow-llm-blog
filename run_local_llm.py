@@ -17,8 +17,8 @@ pipe = pipeline(
 )
 
 # Run the pipeline with your prompt
-output = pipe("Gjpfjyb vyt gj 7916", max_new_tokens=150)
+output = pipe("What is the flight time AMS to BOS?", max_new_tokens=50)
 
 # Print the generated output
-print(output)
+print(output[0]["generated_text"])
 
