@@ -1,0 +1,5 @@
+Source code for the blog entry: [https://samarkanov.info/blog/2025/jun/local-remote-llms-airflow-mlflow.html](https://samarkanov.info/blog/2025/jun/local-remote-llms-airflow-mlflow.html)
+
+This project details the development of an Airflow pipeline that benchmarks local LLM performance against remote models by running concurrent inferences and utilizing a high-power "judge" LLM to select the superior response. By integrating MLflow 3.1.0 to track experiment metrics and capture outputs, the experiment reveals a stark contrast in efficiency: while the local Gemma-3-1b-pt model offers surprisingly decent quality for common facts, it suffers from significant hallucinations on niche topics and takes 11 minutes to process what the remote API handles in just 10 seconds. Ultimately, the experience highlights that while MLflow provides an intuitive and stable environment for model management, local LLM execution remains a hardware-intensive and time-consuming "painful endeavor" for standard consumer computers in 2025.
+
+![](https://samarkanov.info/assets/llm-mlflow-airflow/llm-airflow-mlflow.svg)
